@@ -3,7 +3,7 @@
 
 #include "../src/epos4/epos4_def.h"
 
-#define SIMULATE
+// #define SIMULATE
 
 #define IP_ADDR "10.2.1.177"
 #define MASTER_ADDR "10.2.1.1"

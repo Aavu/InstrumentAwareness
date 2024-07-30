@@ -43,8 +43,8 @@ public:
             return err;
 
 #ifndef SIMULATE
-        err = m_epos.init(1, MOTOR_MODEL[0], ENCODER_TICKS_PER_TURN[0]);
-        if (err) {
+        int e = m_epos.init(1, ENCODER_TICKS_PER_TURN[0]);
+        if (err != 0) {
             LOG_ERROR("Error initializing motor");
             reset();
             return kNotInitializedError;
