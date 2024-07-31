@@ -17,7 +17,7 @@ const OpMode OP_MODE[] = { CyclicSyncPosition };
 const int ENCODER_TICKS_PER_TURN[] = { 2048 };  // ticks per 90 deg turn
 const int MOTOR_POLARITY[] = { 0 };  // Direction of rotation 0: ccw, 1 cw
 const int HOMING_METHOD[] = { CurrentThresholdNegative };
-const int HOMING_THRESHOLD[] = { 2000 };
+const int HOMING_THRESHOLD[] = { 5000 };
 
 #define PDO_RATE 10    // ms
 
@@ -26,10 +26,10 @@ const int EC45_DATA[] = { 3210, 5000, 36900, 296, 8, 0, 781067, 1386330, 3303872
 
 #define GT2_PULLEY_RADIUS 5.05
 // PID control params
-const float Kp = 0.01;
-const float Kd = 0.001;
-const float Ki = 50;
-#define POSITION_OFFSET 200
+const float Kp = 0.001;
+const float Kd = 0.0001;
+const float Ki = 1;
+#define POSITION_OFFSET 0
 #define MIN_POSITION_MM 0.f
 #define MAX_POSITION_MM 50.f
 
